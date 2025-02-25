@@ -5,6 +5,33 @@
 * [License]
 
 
+This repo is meant as a minimal repro test project for running CLJS tests with figwheel.
+
+**repro:**
+
+* build a docker image
+  ```command
+  docker build --platform linux/amd64 -t test/fig .
+  ```
+  > `--platform` specified because otherwise chrome doesn't seem to build
+  > correctly
+* run and exec into docker image
+  ```command
+  docker run --rm -it --entrypoint bash <image-id>
+  ```
+* run figwheel tests
+  ```command
+  clojure -M:test-ci
+  ```
+
+**Expect:**
+
+We expect the tests to start and run.
+
+**Actual:**
+
+fig builds and then the environment is launched and tests aren't run.
+
 ## Quick Start
 
 * Clone this `figwheel-ci-tests`
