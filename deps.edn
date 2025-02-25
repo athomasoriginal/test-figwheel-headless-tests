@@ -1,0 +1,24 @@
+{:paths
+ ["src" "test" "resources" "target"]
+
+ :deps
+ {org.clojure/clojurescript {:mvn/version "1.11.132"}
+
+  com.bhauman/figwheel-main {:mvn/version "0.2.20"}
+
+  reagent/reagent           {:mvn/version "1.2.0"}}
+
+ :aliases
+ {:dev  {:main-opts ["--main"  "figwheel.main"
+                     "--build" "dev"
+                     "--repl"]}
+
+
+  :test {:main-opts ["--main"         "figwheel.main"
+                     "--compile-opts" "test.headless.cljs.edn"
+                     "--fw-opts"      "{:launch-js [\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" \"--headless\" \"--remote-debugging-port=9222\" :open-url]}"
+                     "--main"         "figwheel-ci-tests.test-runner"]}
+
+  :prod {:main-opts ["--main"          "figwheel.main"
+                     "--optimizations" "advanced"
+                     "--build-once"    "prod"]}}}

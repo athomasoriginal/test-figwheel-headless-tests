@@ -1,0 +1,3 @@
+{:main       figwheel-ci-tests.figwheel-ci-tests
+ :output-dir "out"
+ :output-to  "out/dev-main.js"}

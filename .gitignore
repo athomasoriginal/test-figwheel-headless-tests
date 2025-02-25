@@ -1,0 +1,39 @@
+# keep the log dir, but ignore the log files
+logs/**/*
+!logs/.gitkeep
+
+# editor - vim
+.sw*
+*.class
+*.jar
+*.swp
+*~
+
+# editor - vscode
+.calva/output-window/
+.vscode
+
+# editor - lsp
+.lsp/.cache
+.lsp/sqlite.db
+
+# lang - clojure
+.classpath
+.cpcache
+.java-version
+/checkouts
+/classes
+/target
+
+# clojure - clj-kondo
+.clj-kondo/imports
+.clj-kondo/.cache
+
+# clojure - nrepl
+.nrepl-history
+.nrepl-port
+
+# clojure - rebl
+.rebel_readline_history
+.settings
+.socket-repl-port
