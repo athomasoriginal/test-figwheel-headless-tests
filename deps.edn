@@ -4,7 +4,7 @@
  :deps
  {org.clojure/clojurescript {:mvn/version "1.11.132"}
 
-  com.bhauman/figwheel-main {:mvn/version "0.2.20"}
+  com.bhauman/figwheel-main {:mvn/version "0.2.21-SNAPSHOT"}
 
   reagent/reagent           {:mvn/version "1.2.0"}}
 
