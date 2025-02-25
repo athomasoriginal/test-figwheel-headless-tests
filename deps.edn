@@ -21,7 +21,7 @@
 
   :test-ci {:main-opts ["--main"         "figwheel.main"
                         "--compile-opts" "test.headless.cljs.edn"
-                        "--fw-opts"      "{:launch-js [\"google-chrome\" \"--disable-dev-shm-usage\" \"--disable-gpu\" \"--headless\" \"--remote-debugging-port=9222\" \"--repl\" :open-url]}"
+                        "--fw-opts"      "{:launch-js [\"google-chrome\" \"--no-sandbox\" \"--disable-dev-shm-usage\" \"--disable-gpu\" \"--headless\" \"--remote-debugging-port=9222\" \"--repl\" :open-url]}"
                         "--main"         "figwheel-ci-tests.test-runner"]}
 
   :prod {:main-opts ["--main"          "figwheel.main"
